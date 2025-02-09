@@ -123,6 +123,7 @@
             <p>Wishing you a day filled with love, laughter, and lots of cake! 🍰</p>
             <p>May all your dreams and wishes come true this year! 💫</p>
             <button class="surprise-btn" onclick="showSurprise()">Click for Surprise! 🎈</button>
+            
         </div>
 
         <div class="photo-gallery" id="photo-gallery">
@@ -196,16 +197,14 @@
         </div>
     </div>
 
-    <audio id="birthday-song" src="birth/birthday_song.mp3" autoplay loop></audio>
+    <audio id="birthday-song" src="birth/birthday_song.mp3" loop></audio>
     
     <script>
-        // function showSurprise() {
-        //     document.getElementById('photo-gallery').style.display = 'flex';
-        //     document.getElementById('video-wishes').style.display = 'block';
-        // }
+      
         function showSurprise() {
     let gallery = document.getElementById('photo-gallery');
     let videos = document.getElementById('video-wishes');
+    let song = document.getElementById('birthday-song');
     gallery.style.display = 'flex';
     videos.style.display = 'block';
     gallery.style.opacity = 0;
@@ -216,7 +215,13 @@
         videos.style.transition = "opacity 1s";
         videos.style.opacity = 1;
     }, 100);
+    song.play();
 }
+document.querySelectorAll('video').forEach(video => {
+        video.addEventListener('play', function () {
+            document.getElementById('birthday-song').pause();
+        });
+    });
 
     </script>
     <script>
@@ -246,6 +251,7 @@ document.getElementById('lightbox').addEventListener('click', function() {
 });
 
     </script>
+    
     
 </body>
 </html>
