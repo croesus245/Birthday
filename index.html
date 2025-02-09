@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 51st Birthday Dad!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('birth/dad_photo_134.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Comic Sans MS', cursive;
+            text-align: center;
+            color: white;
+        }
+
+        .container {
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        h1 {
+            color: #ffcc00;
+            font-size: 3em;
+            text-shadow: 2px 2px #000;
+        }
+
+        .photo-gallery {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* .photo-gallery img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        } */
+        .photo-gallery img {
+    width: 30%;
+    max-width: 120px;
+}
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s;
+}
+
+.lightbox.show {
+    display: flex;
+}
+
+.lightbox img:hover {
+    transform: scale(1.05);
+}
+
+
+
+        .video-wishes {
+            display: none;
+            margin-top: 20px;
+        }
+
+        video {
+            width: 80%;
+            max-width: 600px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .surprise-btn {
+            padding: 15px 30px;
+            font-size: 1.2em;
+            background: #ff0066;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .surprise-btn:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="" alt="Expanded Photo">
+    </div>
+    
+    <div class="container">
+        <h1>🎉 Happy 51st Birthday Dad! 🎂</h1>
+        
+        <div id="countdown"></div>
+
+        <div class="message">
+            <h2>To the most amazing dad! 🥳</h2>
+            <p>Wishing you a day filled with love, laughter, and lots of cake! 🍰</p>
+            <p>May all your dreams and wishes come true this year! 💫</p>
+            <button class="surprise-btn" onclick="showSurprise()">Click for Surprise! 🎈</button>
+        </div>
+
+        <div class="photo-gallery" id="photo-gallery">
+            <img src="birth/dad_photo_100.jpg" alt="Dad">
+            <img src="birth/dad_photo_101.jpg" alt="Dad">
+            <img src="birth/dad_photo_102.jpg" alt="Dad">
+            <img src="birth/dad_photo_103.jpg" alt="Dad">
+            <img src="birth/dad_photo_104.jpg" alt="Dad">
+            <img src="birth/dad_photo_105.jpg" alt="Dad">
+            <img src="birth/dad_photo_106.jpg" alt="Dad">
+            <img src="birth/dad_photo_107.jpg" alt="Dad">
+            <img src="birth/dad_photo_108.jpg" alt="Dad">
+            <img src="birth/dad_photo_109.jpg" alt="Dad">
+            <img src="birth/dad_photo_110.jpg" alt="Dad">
+            <img src="birth/dad_photo_111.jpg" alt="Dad">
+            <img src="birth/dad_photo_112.jpg" alt="Dad">
+            <img src="birth/dad_photo_113.jpg" alt="Dad">
+            <img src="birth/dad_photo_114.jpg" alt="Dad">
+            <img src="birth/dad_photo_115.jpg" alt="Dad">
+            <img src="birth/dad_photo_116.jpg" alt="Dad">
+            <img src="birth/dad_photo_117.jpg" alt="Dad">
+            <img src="birth/dad_photo_118.jpg" alt="Dad">
+            <img src="birth/dad_photo_119.jpg" alt="Dad">
+            <img src="birth/dad_photo_120.jpg" alt="Dad">
+            <img src="birth/dad_photo_121.jpg" alt="Dad">
+            <img src="birth/dad_photo_122.jpg" alt="Dad">
+            <img src="birth/dad_photo_123.jpg" alt="Dad">
+            <img src="birth/dad_photo_124.jpg" alt="Dad">
+            <img src="birth/dad_photo_125.jpg" alt="Dad">
+            <img src="birth/dad_photo_126.jpg" alt="Dad">
+            <img src="birth/dad_photo_127.jpg" alt="Dad">
+            <img src="birth/dad_photo_128.jpg" alt="Dad">
+            <img src="birth/dad_photo_129.jpg" alt="Dad">
+            <img src="birth/dad_photo_130.jpg" alt="Dad">
+            <img src="birth/dad_photo_131.jpg" alt="Dad">
+            <img src="birth/dad_photo_132.jpg" alt="Dad">
+            <img src="birth/dad_photo_133.jpg" alt="Dad">
+            <img src="birth/dad_photo_134.jpg" alt="Dad">
+            <img src="birth/dad_photo_135.jpg" alt="Dad">
+            <img src="birth/dad_photo_136.jpg" alt="Dad">
+            <img src="birth/dad_photo_137.jpg" alt="Dad">
+            <img src="birth/dad_photo_138.jpg" alt="Dad">
+            <img src="birth/dad_photo_139.jpg" alt="Dad">
+            <img src="birth/dad_photo_140.jpg" alt="Dad">
+            <img src="birth/dad_photo_141.jpg" alt="Dad">
+            <img src="birth/dad_photo_142.jpg" alt="Dad">
+            <img src="birth/dad_photo_143.jpg" alt="Dad">
+            <img src="birth/dad_photo_144.jpg" alt="Dad">
+            <img src="birth/dad_photo_145.jpg" alt="Dad">
+            <img src="birth/dad_photo_146.jpg" alt="Dad">
+            <img src="birth/dad_photo_147.jpg" alt="Dad">
+            <img src="birth/dad_photo_148.jpg" alt="Dad">
+            <img src="birth/dad_photo_149.jpg" alt="Dad">
+            <img src="birth/dad_photo_150.jpg" alt="Dad">
+            <img src="birth/dad_photo_151.jpg" alt="Dad">
+        </div>
+        
+        
+        
+
+        <div class="video-wishes" id="video-wishes">
+            <h2>🎥 Birthday Wishes! 💖</h2>
+            <video controls>
+                <source src="birthday_wish.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            
+            <video controls>
+                <source src="birth/birthday_wish2.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <audio id="birthday-song" src="birth/birthday_song.mp3" autoplay loop></audio>
+    
+    <script>
+        // function showSurprise() {
+        //     document.getElementById('photo-gallery').style.display = 'flex';
+        //     document.getElementById('video-wishes').style.display = 'block';
+        // }
+        function showSurprise() {
+    let gallery = document.getElementById('photo-gallery');
+    let videos = document.getElementById('video-wishes');
+    gallery.style.display = 'flex';
+    videos.style.display = 'block';
+    gallery.style.opacity = 0;
+    videos.style.opacity = 0;
+    setTimeout(() => {
+        gallery.style.transition = "opacity 1s";
+        gallery.style.opacity = 1;
+        videos.style.transition = "opacity 1s";
+        videos.style.opacity = 1;
+    }, 100);
+}
+
+    </script>
+    <script>
+        document.querySelectorAll('.photo-gallery img').forEach(img => {
+            img.addEventListener('click', function() {
+                document.getElementById('lightbox-img').src = this.src;
+                document.getElementById('lightbox').classList.add('show');
+            });
+        });
+    document.getElementById('photo-gallery').addEventListener('click', function(event) {
+    if (event.target.tagName === 'IMG') {
+        document.getElementById('lightbox-img').src = event.target.src;
+        document.getElementById('lightbox').classList.add('show');
+    }
+});
+
+
+document.getElementById('photo-gallery').addEventListener('click', function(event) {
+    if (event.target.tagName === 'IMG') {
+        document.getElementById('lightbox-img').src = event.target.src;
+        document.getElementById('lightbox').classList.add('show');
+    }
+});
+
+document.getElementById('lightbox').addEventListener('click', function() {
+    this.classList.remove('show');
+});
+
+    </script>
+    
+</body>
+</html>
