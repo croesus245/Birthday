@@ -187,27 +187,27 @@
         <div class="video-wishes" id="video-wishes">
             <h2>🎥 Birthday Wishes from families and friends! 💖</h2>
             <video controls>
-                <source src="birth/BK_1.mp4" type="video/mp4">
+                <source src="/birth/BK_1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
             
             <video controls>
-                <source src="birth/BL_2.mp4" type="video/mp4">
+                <source src="/birth/BL_2.mp4" type="video/mp4">
             </video>
             <video controls>
-                <source src="birth/KR_3.mp4" type="video/mp4">
+                <source src="/birth/KR_3.mp4" type="video/mp4">
                 </video>
                 <video controls>
-                    <source src="birth/AB_4.mp4" type="video/mp4">
+                    <source src="/birth/AB_4.mp4" type="video/mp4">
                     </video>
                 <video controls>
-                    <source src="birth/IB_5.mp4" type="video/mp4">
+                    <source src="/birth/IB_5.mp4" type="video/mp4">
             </video>
             <video controls>
-                <source src="birth/TT_6.mp4" type="video/mp4">
+                <source src="/birth/TT_6.mp4" type="video/mp4">
         </video>
         <video controls>
-            <source src="birth/TK_7.mp4" type="video/mp4">
+            <source src="/birth/TK_7.mp4" type="video/mp4">
     </video>
         </div>
     </div>
@@ -264,6 +264,24 @@ document.getElementById('photo-gallery').addEventListener('click', function(even
 document.getElementById('lightbox').addEventListener('click', function() {
     this.classList.remove('show');
 });
+document.querySelectorAll('video').forEach(video => {
+    let song = document.getElementById('birthday-song');
+
+    video.addEventListener('play', function () {
+        song.pause();
+    });
+
+    video.addEventListener('pause', function () {
+        if (!this.ended) {
+            song.play();
+        }
+    });
+
+    video.addEventListener('ended', function () {
+        song.play();
+    });
+});
+
 
     </script>
     
